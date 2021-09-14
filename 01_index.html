@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    body {
+      background: #f2f4f7;
+    }
+
+    /* 顶部标题 */
+    .head {
+      width: 375px;
+      margin: 0 auto;
+      background: #fff;
+    }
+
+    .head .head_content {
+      padding: 14px 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .head .head_content .head_left img {
+      width: 115px;
+      vertical-align: middle;
+    }
+
+    .head .head_content .head_left span {
+      font-size: 12px;
+      padding: 3px 5px;
+      border: 1px solid #ff523e;
+      border-radius: 10px;
+      color: #ff523e;
+      vertical-align: middle;
+    }
+
+    .head .head_content .head_right {
+      margin-right: 10px;
+    }
+
+    /* 顶部标题 end */
+    /* 导航细分 */
+    .top_nav {
+      width: 375px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 0px 0 25px 0;
+      overflow: hidden;
+    }
+
+    .top_nav .top_nav_content ul {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 20px;
+    }
+
+    .top_nav .top_nav_content ul li {
+      flex: 1;
+      text-align: center;
+    }
+
+    .top_nav .top_nav_content ul li img {
+      width: 38px;
+    }
+
+    .top_nav .top_nav_content ul li p {
+      font-size: 14px;
+      line-height: 14px;
+      margin-top: 8px;
+    }
+
+    /* 导航细分 end */
+    /* 主题内容 */
+    .con {
+      width: 375px;
+      margin: 0 auto;
+    }
+
+    /* .con .con_content {
+
+    } */
+    .con .con_content .item {
+      margin-top: 12px;
+      background: #fff;
+      padding: 0 15px 15px 15px;
+    }
+
+    .con .con_content .item .title {
+      font-size: 16px;
+      line-height: 16px;
+      padding: 23px 0px 15px 0px;
+    }
+
+    /* 畅销好课 */
+    .con .con_content .boom ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .con .con_content .boom ul li {
+      width: 168px;
+      height: 160px;
+      font-size: 0;
+    }
+
+    .con .con_content .boom ul li img {
+      width: 100%;
+    }
+
+    .con .con_content p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 8px;
+    }
+
+    .con .con_content p.price {
+      font-size: 14px;
+      color: #ff6a4d;
+      margin-top: 0 !important;
+    }
+
+    .con .con_content p.free {
+      font-size: 14px;
+      color: #5bc482;
+      margin-top: 0 !important;
+    }
+
+    /* 畅销好课 end */
+    /* 专题 */
+    .con .con_content .special ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .con .con_content .special ul li {
+      font-size: 0;
+      margin-bottom: 10px;
+    }
+
+    .con .con_content .special ul li img {
+      width: 100%;
+    }
+
+    /* 专题 end */
+    /* 办公效率 */
+    .con .con_content .work ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .con .con_content .work ul li {
+      width: 168px;
+      height: 160px;
+      margin-bottom: 12px;
+      font-size: 0;
+    }
+
+    .con .con_content .work ul li img {
+      width: 100%;
+    }
+
+    .con .con_content .work ul li p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 8px;
+    }
+
+    .con .con_content .work ul li:nth-child(1) {
+      width: 346px;
+      height: 212px;
+    }
+
+    /* 办公效率 end */
+    /* 主题内容 end */
+    /* 版权 */
+    .copyright {
+      width: 375px;
+      margin: 0 auto;
+    }
+
+    .copyright .copyright_content p {
+      background: #f2f4f7;
+      color: #bcc1cb;
+      text-align: center;
+      line-height: 52px;
+      font-size: 16px;
+    }
+
+    /* 版权 end */
+    /* 底部 */
+    .foot {
+      width: 375px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .foot .foot_content {
+      background: #fff;
+      padding: 5px 0 5px 0;
+      border-top: 1px solid #eee;
+    }
+
+    .foot .foot_content ul {
+      display: flex;
+    }
+
+    .foot .foot_content ul li {
+      flex: 1;
+      text-align: center;
+    }
+
+    .foot .foot_content ul li p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    /* 底部 end */
+  </style>
+</head>
+
+<body>
+  <!-- 顶部标题 -->
+  <div class="head">
+    <div class="head_content">
+      <div class="head_left">
+        <img src="./img/logo.png" alt="">
+        <span>App查看</span>
+      </div>
+      <div class="head_right">
+        <i class="bi bi-search"></i>
+      </div>
+    </div>
+  </div>
+  <!-- 顶部标题 end -->
+
+  <!-- 导航细分 -->
+  <div class="top_nav">
+    <div class="top_nav_content">
+      <ul>
+        <li>
+          <img src="./img/topNav_01.png" alt="">
+          <p>微专业</p>
+        </li>
+        <li>
+          <img src="./img/topNav_02.png" alt="">
+          <p>职场提升</p>
+        </li>
+        <li>
+          <img src="./img/topNav_03.png" alt="">
+          <p>编程开发</p>
+        </li>
+        <li>
+          <img src="./img/topNav_04.png" alt="">
+          <p>人工智能</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <img src="./img/topNav_05.png" alt="">
+          <p>产品与运营</p>
+        </li>
+        <li>
+          <img src="./img/topNav_06.png" alt="">
+          <p>设计创意</p>
+        </li>
+        <li>
+          <img src="./img/topNav_07.png" alt="">
+          <p>电子商务</p>
+        </li>
+        <li>
+          <img src="./img/topNav_08.png" alt="">
+          <p>语言学习</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 导航细分 end -->
+  <!-- 主题内容 -->
+  <div class="con">
+    <div class="con_content">
+      <!-- 畅销好课 -->
+      <div class="item boom">
+        <div class="title">
+          <h3>畅销好课</h3>
+        </div>
+        <ul>
+          <li>
+            <img src="./img/con_01.png" alt="">
+            <p>听得懂的金融思维课</p>
+            <p class="price">
+            </p>
+          </li>
+          <li>
+            <img src="./img/con_02.jpg" alt="">
+            <p>能帮你赚到钱的50节商业思维提升课</p>
+            <p class="price">
+            </p>
+          </li>
+          <li>
+            <img src="./img/con_03.png" alt="">
+            <p>25堂通识阅读课 带你打破知识边界</p>
+            <p class="price">
+            </p>
+          </li>
+          <li>
+            <img src="./img/con_04.jpg" alt="">
+            <p>Excel商业图表模板大法</p>
+            <p class="price">
+              ￥120
+            </p>
+          </li>
+          <li>
+            <img src="./img/con_05.jpg" alt="">
+            <p>PS教程超级合辑</p>
+            <p class="price">
+              ￥299
+            </p>
+          </li>
+          <li>
+            <img src="./img/con_06.jpg" alt="">
+            <p>赵铁夫讲单词</p>
+            <p class="price">
+              ￥298
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- 畅销好课 end-->
+      <!-- 专题 -->
+      <div class="item special">
+        <div class="title">
+          <h3>专题</h3>
+        </div>
+        <ul>
+          <li>
+            <a href="javascritp:;">
+              <img src="./img/zt_01.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="javascritp:;">
+              <img src="./img/zt_02.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="javascritp:;">
+              <img src="./img/zt_03.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- 专题 end -->
+      <!-- 职场提升 -->
+      <div class="item job_market boom">
+        <div class="title">
+          <h3>职场提升</h3>
+        </div>
+        <ul>
+          <li>
+            <img src="./img/zc_01.png" alt="">
+            <p>高效阅读：如何投资你的碎片化时间</p>
+          </li>
+          <li>
+            <img src="./img/zc_02.png" alt="">
+            <p>14堂课让你拥有逻辑思维</p>
+          </li>
+          <li>
+            <img src="./img/zc_03.png" alt="">
+            <p>避开这些坑，创业才靠谱</p>
+          </li>
+          <li>
+            <img src="./img/zc_04.png" alt="">
+            <p>个人知识管理，训练结构化思维</p>
+          </li>
+          <li>
+            <img src="./img/zc_05.png" alt="">
+            <p>TTT培训师实战精品课</p>
+          </li>
+          <li>
+            <img src="./img/zc_06.png" alt="">
+            <p>职场必杀技，25天练就好口才！</p>
+          </li>
+        </ul>
+      </div>
+      <!-- 职场提升end -->
+      <!-- 办公效率 -->
+      <div class="item work">
+        <div class="title">
+          <h3>办公效率</h3>
+        </div>
+        <ul>
+          <li>
+            <img src="./img/bg_01.jpg" alt="">
+            <p>我懂个P</p>
+            <p class="price">￥299</p>
+          </li>
+          <li>
+            <img src="./img/bg_02.jpg" alt="">
+            <p>交互式PPT</p>
+            <p class="price">￥199</p>
+          </li>
+          <li>
+            <img src="./img/bg_03.jpg" alt="">
+            <p>OmniFocus for iOS</p>
+            <p class="price">￥99</p>
+          </li>
+          <li>
+            <img src="./img/bg_04.jpg" alt="">
+            <p>Excel商业图表修炼秘笈</p>
+            <p class="free">免费</p>
+          </li>
+          <li>
+            <img src="./img/bg_05.jpg" alt="">
+            <p>Excel+PPT+Word修炼营小白变高手</p>
+            <p class="price">￥499</p>
+          </li>
+        </ul>
+      </div>
+      <!-- 办公效率 end -->
+      <!-- 语言留学 -->
+      <div class="item language work">
+        <div class="title">
+          <h3>语言留学</h3>
+        </div>
+        <ul>
+          <li>
+            <img src="./img/yy_01.jpg" alt="">
+            <p>More Than Career English</p>
+          </li>
+          <li>
+            <img src="./img/yy_02.jpg" alt="">
+            <p>Frank 365天陪伴式英语私教课</p>
+          </li>
+          <li>
+            <img src="./img/yy_03.jpg" alt="">
+            <p>进击吧，日本语！</p>
+          </li>
+          <li>
+            <img src="./img/yy_04.jpg" alt="">
+            <p>赵铁夫讲单词—教你牢记过万单词</p>
+          </li>
+          <li>
+            <img src="./img/yy_05.jpg" alt="">
+            <p>跟500强工程师学职场商务英语</p>
+          </li>
+        </ul>
+      </div>
+      <!-- 语言留学 end -->
+      <!-- 个人理财 -->
+      <div class="item management work">
+        <div class="title">
+          <h3>个人理财</h3>
+        </div>
+        <ul>
+          <li>
+            <img src="./img/lc_01.jpg" alt="">
+            <p>职场人的理财必修课h</p>
+          </li>
+          <li>
+            <img src="./img/lc_02.jpg" alt="">
+            <p>躺着也赚钱的基金投资课</p>
+          </li>
+          <li>
+            <img src="./img/lc_03.jpg" alt="">
+            <p>股市价值投资</p>
+          </li>
+          <li>
+            <img src="./img/lc_04.jpg" alt="">
+            <p>跟简七学理财</p>
+          </li>
+          <li>
+            <img src="./img/lc_05.jpg" alt="">
+            <p>希尔教你炒外汇</p>
+          </li>
+        </ul>
+      </div>
+      <!-- 个人理财 end -->
+      <!-- 摄影影视 -->
+      <div class="item films boom">
+        <div class="title">
+          <h3>摄影影视</h3>
+        </div>
+        <ul>
+          <li>
+            <img src="./img/ys_01.jpg" alt="">
+            <p>零基础学摄影后期 1000分钟干货</p>
+          </li>
+          <li>
+            <img src="./img/ys_02.jpg" alt="">
+            <p>摄影大师课2.0 美国2018倾情巨制</p>
+          </li>
+          <li>
+            <img src="./img/ys_03.jpg" alt="">
+            <p>人像/摄影/私房/古风/悬浮/后期</p>
+          </li>
+          <li>
+            <img src="./img/ys_04.jpg" alt="">
+            <p>韩松手机摄影课：入门到创作</p>
+          </li>
+          <li>
+            <img src="./img/ys_05.jpg" alt="">
+            <p>数码单反摄影高手速成</p>
+          </li>
+          <li>
+            <img src="./img/ys_06.jpg" alt="">
+            <p>儿童手机摄影课 叶梓携女儿出镜</p>
+          </li>
+        </ul>
+      </div>
+      <!-- 摄影影视 end -->
+      <!-- 兴趣生活 -->
+      <div class="item live boom">
+        <div class="title">
+          <h3>兴趣生活</h3>
+        </div>
+        <ul>
+          <li>
+            <img src="./img/sh_01.jpg" alt="">
+            <p>星绝密饮食方法，让我狂瘦32斤</p>
+          </li>
+          <li>
+            <img src="./img/sh_02.jpg" alt="">
+            <p>2小时讲完线性代数(线代)</p>
+          </li>
+          <li>
+            <img src="./img/sh_03.jpg" alt="">
+            <p>零基础学唱歌声乐训练营</p>
+          </li>
+          <li>
+            <img src="./img/sh_04.jpg" alt="">
+            <p>3小时讲完复变函数与积分变换</p>
+          </li>
+          <li>
+            <img src="./img/sh_05.jpg" alt="">
+            <p>从零基础到精通，搞定创意绘画</p>
+          </li>
+          <li>
+            <img src="./img/sh_06.jpg" alt="">
+            <p>开口英语K1-48周240节外教课</p>
+          </li>
+        </ul>
+      </div>
+      <!-- 兴趣生活 end -->
+    </div>
+  </div>
+  <!-- 主题内容 end -->
+  <!-- 版权 -->
+  <div class="copyright">
+    <div class="copyright_content">
+      <p>©1997-2019 网易公司 版权所有</p>
+    </div>
+  </div>
+  <!-- 版权 end -->
+  <!-- 底部 -->
+  <div class="foot">
+    <div class="foot_content">
+      <ul>
+        <li>
+          <i class="bi bi-house-door-fill"></i>
+          <p>首页</p>
+        </li>
+        <li>
+          <i class="bi bi-book"></i>
+          <p>我的学习</p>
+        </li>
+        <li>
+          <i class="bi bi-person"></i>
+          <p>账号</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 底部 end -->
+</body>
+
+</html>
